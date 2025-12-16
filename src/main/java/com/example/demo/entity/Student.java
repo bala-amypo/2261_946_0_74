@@ -27,13 +27,13 @@ public class Student{
     public float getCgpa(){
         return cgpa;
     }
-    public void setId(long id){
+    public void setCgpa(long id){
         this.cgpa=cgpa;
     }
-    public long getId(){
-        return id;
-    }
-    public void setId(long id){
-        this.id=id;
+   public Student(int id, String name, String email, float cgpa) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.cgpa = cgpa;
     }
 }

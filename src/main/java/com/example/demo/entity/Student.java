@@ -1,45 +1,48 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+// import jakarta.persistence.GeneratedValue;
+// import jakarta.persistence.Id;
 
-public class Student{
+@Entity
+public class Student {
     @Id
-    private long id;
-    private String sname;
-    private String semail;
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    private int id;
+    private String stuname;
+    private String stumail;
     private float cgpa;
-
-    public long getId(){
+    public int getId() {
         return id;
     }
-    public void setId(long id){
-        this.id=id;
+    public void setId(int id) {
+        this.id = id;
     }
-    public String getSname(){
-        return sname;
+    public String getStuname() {
+        return stuname;
     }
-    public void setSname(long sname){
-        this.sname=sname;
+    public void setStuname(String stuname) {
+        this.stuname = stuname;
     }
-    public String getSemail(){
-        return semail;
+    public String getStumail() {
+        return stumail;
     }
-    public void setSemail(long semail){
-        this.semail=semail;
+    public void setStumail(String stumail) {
+        this.stumail = stumail;
     }
-    public float getCgpa(){
+    public float getCgpa() {
         return cgpa;
     }
-    public void setCgpa(long id){
-        this.cgpa=cgpa;
-    }
-    public Student(int id, String sname, String semail, float cgpa) {
-        this.id = id;
-        this.sname = sname;
-        this.semail = semail;
+    public void setCgpa(float cgpa) {
         this.cgpa = cgpa;
     }
-     public Student() {
+    public Student(int id, String stuname, String stumail, float cgpa) {
+        // this.id = id;
+        this.stuname = stuname;
+        this.stumail = stumail;
+        this.cgpa = cgpa;
     }
-    
+    public Student() {
+        
+    }
 }
